@@ -3,7 +3,7 @@ module.exports = function(funcs, last) {
   var context, i;
   i = 0;
   context = {
-    _call: function() {
+    _then: function() {
       return funcs[++i].bind(context);
     },
     _last: function() {

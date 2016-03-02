@@ -8,18 +8,16 @@ async = require 'simple-then'
 async [
 	->
 		print 'f1'
-		@name = 'Charles'
 		setTimeout @_then(), 500
 		
 	->
 		print 'f2'
-		print @name
-		if @name !== 'Charles'
-		  @_error new Error 'Error from f2'
+		@name = 'Charles'
 		setTimeout @_then(), 500
 
 	->
 		print 'f3'
+		@_error new Error unless @name == 'Charles'
 		@_last 'arg1', 'arg2'
 
 ], (err, arg1, arg2) ->

@@ -17,5 +17,9 @@
     "error"
   ],
   "author": "Charles Bensimon",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/charlesbensimon/node-simple-then"
+  },
   "license": "ISC"
 }

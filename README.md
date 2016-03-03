@@ -11,16 +11,19 @@ async([
 		console.log('Will perform a request in 500ms...')
 	},
 	function() {
-		this.url = 'http://google.fr'           // You can use 'this' to communicate between functions
+		// You can use 'this' to communicate between functions
+		this.url = 'http://google.fr'
 		request(this.url, this._then())
 		console.log('requesting google...')
 	},
 	function (err, res, body) {
 		console.log(this.url + " has arrived")
-		this._error(err)			            // Will call the end function only if 'err' contains something
-		this._end('arg1', 'arg2')	            // As many as you want
+		// Will call the end function only if 'err' contains something
+		this._error(err)
+		// You can call the end function with as many arguments as you want
+		this._end('arg1', 'arg2')
 	}
-], function(err, arg1, arg2) {				    // Optional if you don't call @_error or @_end
+], function(err, arg1, arg2) { // Optional if you don't call @_error or @_end
 	if err throw err
 	console.log(arg1, arg2)
 })

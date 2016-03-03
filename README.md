@@ -23,7 +23,8 @@ async([
 		// You can call the end function with as many arguments as you want
 		this._end('arg1', 'arg2')
 	}
-], function(err, arg1, arg2) { // Optional if you don't call @_error or @_end
+// End function : only if you call @_error or @_end
+], function(err, arg1, arg2) {
 	if err throw err
 	console.log(arg1, arg2)
 })

@@ -8,7 +8,7 @@ var request = require('request')
 async([
 	function() {
 	  setTimeout(this._then(), 500);
-		console.log('Will perform a request in 500ms...')
+	  console.log('Will perform a request in 500ms...')
 	},
 	function() {
 	  // You can use 'this' to communicate between functions

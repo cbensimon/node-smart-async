@@ -28,25 +28,21 @@ async([
 
 Coffeescript
 ```coffeescript
-print = console.log 
-async = require 'smart-async'
-
 async [
 	->
-		print 'f1'
 		setTimeout @_then(), 500
-		
+		console.log 'Waiting 500ms...'
 	->
-		@url = 'http://google.fr'	# You can use this to communicate between functions
+		@url = 'http://google.fr'
 		request @url, @_then()
-		print 'requesting google...'
+		console.log 'requesting google...'
 
 	(err, res, body) ->
-		print "#{@url} has arrived"
-		@_error err					# Will call the end function only if err contains something
-		@_end 'arg1', 'arg2'		# As many as you want
+		console.log "#{@url} has arrived"
+		@_error err
+		@_end 'arg1', 'arg2'
 
-], (err, arg1, arg2) ->				# Optional if you don't call @_error or @_end
+], (err, arg1, arg2) ->
 	throw err if err
 	print arg1, arg2
 ```

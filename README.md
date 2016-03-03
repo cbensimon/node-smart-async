@@ -16,7 +16,7 @@ async [
 		request @url, @_then()
 
 	(err, res, body) ->
-		@_error err
+		@_error err	# Will call the end function only if err contains something
 		print "#{@url} has arrived"
 		@_end 'arg1', 'arg2'	# As many as you want
 

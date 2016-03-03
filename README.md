@@ -18,7 +18,7 @@ async [
 	->
 		print 'f3'
 		@_error new Error() unless @name == 'Charles'
-		@_last 'arg1', 'arg2'
+		@_end 'arg1', 'arg2'
 
 ], (err, arg1, arg2) ->
 	throw err if err

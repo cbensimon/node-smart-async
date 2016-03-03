@@ -1,9 +1,9 @@
-# node-simple-then
+# node-smart-async
 A light Node module for asynchronous javascript
 
 ```coffeescript
 print = console.log 
-async = require 'simple-then'
+async = require 'smart-async'
 
 async [
 	->

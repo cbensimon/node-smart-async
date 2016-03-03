@@ -11,13 +11,13 @@ async [
 		setTimeout @_then(), 500
 		
 	->
-		print 'f2'
-		@name = 'Charles'	# You can use this to communicate between functions
-		setTimeout @_then(), 500
+		print 'requesting google...'
+		@url = 'http://google.fr'	# You can use this to communicate between functions
+		request @url, @_then()
 
-	->
-		print 'f3'
-		@_error new Error() unless @name == 'Charles'	# Value of @name is well 'Charles'
+	(err, res, body) ->
+		@_error err
+		print "#{@url} has arrived"
 		@_end 'arg1', 'arg2'	# As many as you want
 
 ], (err, arg1, arg2) ->	# Optional if you don't call @_error or @_end

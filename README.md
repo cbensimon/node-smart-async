@@ -12,12 +12,12 @@ async [
 		
 	->
 		print 'f2'
-		@name = 'Charles'
+		@name = 'Charles'	# You can use this to communicate between functions
 		setTimeout @_then(), 500
 
 	->
 		print 'f3'
-		@_error new Error() unless @name == 'Charles'
+		@_error new Error() unless @name == 'Charles'	# Value of @name is well 'Charles'
 		@_end 'arg1', 'arg2'	# As many as you want
 
 ], (err, arg1, arg2) ->	# Optional if you don't call @_error or @_end

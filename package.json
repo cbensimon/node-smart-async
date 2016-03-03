@@ -1,6 +1,6 @@
 {
   "name": "simple-then",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A light module for asynchronous javascript",
   "main": "index.js",
   "scripts": {

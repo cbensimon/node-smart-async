@@ -1,6 +1,6 @@
 {
   "name": "smart-async",
-  "version": "1.0.7",
+  "version": "1.0.71",
   "description": "A light module for asynchronous javascript",
   "main": "index.js",
   "scripts": {
@@ -19,7 +19,7 @@
   "author": "Charles Bensimon",
   "repository": {
     "type": "git",
-    "url": "https://github.com/charlesbensimon/node-simple-then"
+    "url": "https://github.com/charlesbensimon/node-smart-async"
   },
   "license": "ISC"
 }
